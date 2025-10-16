@@ -1,0 +1,397 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* MAIN STYLES */
+body {
+    margin: 0;
+    background-color: #e9e9e9;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    margin: 0.5em 0;
+    color: #000;
+}
+
+p, a, li, footer {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Logo section */
+.logo {
+    max-width: 200px; 
+    width: 100%;      
+    height: auto;
+    display: block;
+    margin: 0 auto;    
+}
+
+/* Main container */
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Header & nav bars */
+header {
+    background: #e9e9e9;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+}
+
+nav {
+    background: #e9e9e9;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #444;
+}
+
+/* Main contents */
+main {
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Article container */
+article {
+    padding: 20px;
+    border-radius: 6px;
+    gap: 32px;
+}
+
+/* Intro section */
+article .intro h1 {
+    margin: 0 0 16px 0;
+    font-size: 80px;
+    color: #000;
+}
+
+article .intro h2 {
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+article .intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Grid sections layout */
+.grid-sections {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 32px; 
+  width: 100%;
+}
+
+.grid-sections section {
+  width: 100%;
+}
+
+.grid-sections h2 {
+  font-size: 21px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 8px;
+  max-width: none;
+}
+
+/* Album Images */
+.collage-gallery {
+  display: grid;
+  margin-top: 32px;
+}
+
+/* About the Author */
+.about-author {
+  display: grid;
+  gap: 32px;
+  margin-top: 48px;
+  align-items: center;
+}
+
+.about-author h2 {
+  font-size: 29px;
+  margin-bottom: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.about-author p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.about-author .author-image img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer section */
+footer {
+    background: #14181d;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* THE MEDIA QUERIES!!!! */
+
+/* Small mobile (360–540px) */
+@media (min-width: 360px) and (max-width: 540px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+        margin: 0;
+        padding: 8px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    article .intro h1,
+    article .intro h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .collage-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .collage-left img {
+        display: none;
+    }
+
+    .collage-right {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .collage-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-author {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-author .author-image {
+        order: -1;
+    }
+
+    .about-author img {
+        margin-bottom: 16px;
+    }
+}
+
+/* Large mobile (541–720px) */
+@media (min-width: 541px) and (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    article .intro h1,
+    article .intro h2 {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .collage-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .collage-left img {
+        display: none;
+    }
+
+    .collage-right {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .collage-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-author {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-author .author-image {
+        order: -1;
+    }
+
+    .about-author img {
+        margin-bottom: 16px;
+    }
+}
+
+/* Tablet (721–1024px) */
+@media (min-width: 721px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    article .intro h1,
+    article .intro h2 {
+        font-size: 64px;
+        text-align: center;
+    }
+
+    .collage-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+    }
+
+    .collage-left img {
+        display: none;
+    }
+
+    .collage-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: auto;
+        gap: 0;
+    }
+
+    .collage-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-author {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        gap: 32px;
+    }
+
+    .about-author .author-image img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Desktop (1025px and up) */
+@media (min-width: 1025px) {
+    main {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .grid-sections {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        width: 100%;
+    }
+
+    .grid-sections section {
+        width: 100%;
+    }
+
+    .grid-sections h2 {
+        text-align: left;
+    }
+
+    .collage-gallery {
+        grid-template-columns: 2fr 3fr;
+        align-items: stretch;
+    }
+
+    .collage-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .collage-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .collage-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .about-author {
+        grid-template-columns: 1fr 1fr;
+    }
+}
